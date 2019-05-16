@@ -3,8 +3,8 @@ app = Flask(__name__)
 
 from socket import *
 
-serverName="160.75.192.133"
-serverPort=12000
+serverName="<ServerName>"
+serverPort="<ServerPort>"
 
 clientSocket=socket(AF_INET,SOCK_STREAM)
 

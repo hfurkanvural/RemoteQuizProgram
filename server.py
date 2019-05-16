@@ -4,7 +4,7 @@
 from socket import *
 import threading
 
-registeredusers = ['ece','123']
+registeredusers = ['hfv','123']
 questions = ['1)Which of the following statement is false about transportation layer? <br/>  A)In UDP IP datagrams with same destination port number but different source IP address will be directed to different socket at destination <br/>  B)TCP is a reliable protocol <br/>  C) Network layer build on transport layer  <br/>  D)Network layer provides logical communication between hosts <br/> ',
 '2)Which application can tolerate data loss but their required minimum amount of throughput is elastic? <br/>  A)Skype Call <br/>  B)Gmail <br/>  C)Syllabus <br/>  D)SMS <br/> ',
 '3)Which of the following is true about e-mail? <br/>  A)User mailboxes kept in user agents. <br/>  B)User agent and mail server communicate through STMP protocol. <br/>  C)Two user agent can directly communicate with each other. <br/>  D)In e-mail, there is a three phases of transfer: handshaking, transfer of message and closure. <br/> ',
@@ -102,7 +102,7 @@ class ThreadedServer():
             
 
 if __name__=="__main__":
-    serverPort=12000
+    serverPort="<ServerPort>"
     ThreadedServer(serverPort)
 	
 #multithreaded client is threaded too no need to wait for each other

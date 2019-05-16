@@ -2,8 +2,8 @@
 #this client connects to the server given with the IP and Port# below and sends a message to server
 from socket import *
 
-serverName="160.75.192.133"
-serverPort=12000
+serverName="<ServerName>"
+serverPort="<ServerPort>"
 
 clientSocket=socket(AF_INET,SOCK_STREAM)
 
