@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+      <style>
+            .content {
+              max-width: 600px;
+              margin: auto;
+              padding-top: 50px;
+            }
+      </style>
+      <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        </head>
+   <body class='content'>
+      
+      <form action = "http://localhost:5000/result" method = "POST">
+         <div class="form-group">
+               <label for = "name">{{message}}</label>
+               <div><input type = "text" name = "Name" id = "name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon2"/></div>       
+         </div>
+         <div class="input-group-append">
+               <button class="btn btn-outline-secondary" type="submit">Submit</button>
+         </div>  
+      </form>
+   </body>
+
+</html>
+

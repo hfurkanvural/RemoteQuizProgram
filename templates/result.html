@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <style>
+                .content {
+                  max-width: 1000px;
+                  margin: auto;
+                  padding-top: 50px;
+                }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+   <body class="content">
+        <form action = "http://localhost:5000/result2" method = "POST">
+
+            <div class="form-group">
+                    <label for = "name">{{message|safe}}</label>
+                    {% if message != "User is not registered!" %}
+                    <div style="width: 100px;"><input type = "text" name = "Answer1" id = "name" class="form-control" placeholder="Answer" aria-label="Username" aria-describedby="basic-addon2"/></div>       
+              </div>
+              <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit" id="timer">Submit</button>
+              </div>  
+         </form>
+        </br>
+        </br>
+         <div><h1 class="display-4 text-center" id="counter"></h1>
+            {% endif %}
+        </div>
+        
+   </body>
+   <script type="text/javascript">
+    secs = 20;
+    timer = setInterval(function () {
+        document.getElementById("counter").innerHTML = "Remaining Time: " + secs;
+        if(secs < 1){
+            clearInterval(timer);
+            document.getElementById('timer').click();
+        }
+        secs--;
+    }, 1000)
+
+
+ </script>
+</html>
